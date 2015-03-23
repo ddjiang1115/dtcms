@@ -1,0 +1,39 @@
+﻿body {
+}
+.left20 {
+    margin-left:20px;
+}
+.left80 {
+    margin-left:80px;
+}
+.margin_top10 {margin-top:15px;}
+.clear {clear:both;
+}
+.rightContent {margin-left:40px;
+}
+.mainTitle {text-align:center;font-size:30px;margin-right:370px;
+}
+.dform div {height:60px;
+}
+.dform span {width:100px;display:block;float:left;text-align:right;padding-top:5px;
+}
+.dform label {display:block;float:left;
+}
+.search {margin-left:340px;
+}
+.d_result {margin-left:150px;
+}
+.result {margin-top:50px;font-size:25px;
+}
+.tbtitle {text-align:center;font-size:16px;
+}
+.sum {text-align:right;margin-top:10px;
+}
+.t_result {margin-top:10px;
+}
+.t_result th {border:1px solid black;padding:5px 10px;
+}
+.t_result td {border:1px solid black;padding:5px 10px;text-align:center;white-space:nowrap;
+}
+.Out {margin-top:10px;
+}

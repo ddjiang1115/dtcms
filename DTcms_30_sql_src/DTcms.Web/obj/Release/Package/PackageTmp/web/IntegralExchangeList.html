@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>积分消费列表 - 美国旭贝尔婴幼儿配方奶粉官方网站-今天旭贝尔，明天诺贝尔！</title>
+    
+<link rel="stylesheet" href="/css/pagination.css" />
+    
+<link media="screen" type="text/css" href="/templates/green/css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+<script type="text/javascript" src="/templates/green/js/base.js"></script>
+   <script type="text/javascript"src="jquery.js"></script>
+          <script charset="utf-8" src="/scripts/jquery.easyui.min.js"></script>
+
+    <script src="/scripts/easyui-lang-zh_CN.js"></script>
+
+     <link href="/css/easyui.css" rel="stylesheet" />
+
+    <link href="/css/icon.css" rel="stylesheet" />
+    <link href="/web/style/style.css" rel="stylesheet" />
+    <style>
+
+        .tabs{border-bottom:1px solid #ddd; float:left; line-height:36px;margin:0 0 10px 0;width:100%;height:36px;padding-left:0px;}
+    </style>
+</head>
+
+<body>
+<!--Header-->
+
+    <div class="header">
+        <div class="header_ins">
+            <h1 class="logo"><a href="javascript:;"></a></h1>
+            <div class="txt"><a href="javascript:;">
+                <img src="/web/images/tel.png" /></a></div>
+        </div>
+    </div>
+    <div class="navArea">
+        <div class="navBg">
+            <ul class="nav">
+                <li><a href="/web/index.aspx">首  页</a></li>
+                <li><a href="/web/import.aspx">100%美国进口</a></li>
+                <li><a href="#">产品优势</a></li>
+                <li><a href="/web/products.aspx">旭贝尔产品</a>
+                    <ul class="nav_sub" style="display: none;">
+                        <li><a href="/web/productsresult.aspx">美国生产流程</a></li>
+                        <li><a href="/web/products.aspx">进口追溯体验</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">在线购买</a></li>
+                <li class="member_nav"><a class="on2">会员俱乐部</a>
+                    <ul class="nav_sub" style="display: none;">
+                        <li><a href="/web/Login.aspx">会员登录</a></li>
+                        <li><a href="/user/center/index.html">会员中心</a></li>
+                        <li><a href="/web/member.aspx">会员设置</a></li>
+                        <li><a href="/qj_Point/product.aspx">积分商城</a></li>
+                        <li><a href="/admin/Login.aspx">经销商登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script type="text/javascript">
+    $("li").mousemove(function () {
+        $(this).children("ul").show();
+    });
+    $("li").mouseout(function () {
+        $(this).children("ul").hide();
+    });
+</script>
+<!--/Header-->
+
+<div class="boxwrap">
+  <div class="left180">
+    <!--Sidebar-->
+        <div class="sidebar">
+      <h3>交易管理</h3>
+      <ul>
+        <li><a href="/user/order-list.html">交易订单</a></li>
+        <li><a href="/user/order-close.html">已关闭订单</a></li>
+      </ul>
+      <h3>账户管理</h3>
+      <ul>
+        <li><a href="/user/amount/recharge.html">账户余额</a></li>
+        <li><a href="/web/IntegralExchange.html">我的积分</a></li>
+        <li><a href="/user/message/system.html">站内短信</a></li>
+       <!-- <li><a href="/user/center/invite.html">邀请码</a></li>-->
+      </ul>
+      <h3>基本资料</h3>
+      <ul>
+        <li><a href="/user/center/proinfo.html">个人资料</a></li>
+        <li><a href="/user/center/password.html">修改密码</a></li>
+        <li><a href="/user/center/exit.html">退出登录</a></li>
+      </ul>
+    </div>
+    <!--/Sidebar-->
+  </div>
+  
+  <div class="right757">
+    <h1 class="main_tit">
+      <span><a href="/user/center/index.html">管理首页</a></span>
+      我的积分
+      <strong>Point</strong>
+    </h1>
+    
+    <!--积分明细-->
+    <script type="text/javascript">
+        function ExecPostBack(checkValue) {
+            if (arguments.length == 1) {
+                ExecDelete('/tools/submit_ajax.ashx?action=user_point_delete', checkValue, 'turl');
+            } else {
+                var valueArr = '';
+                $("input[name='checkId']:checked").each(function (i) {
+                    valueArr += $(this).val();
+                    if (i < $("input[name='checkId']:checked").length - 1) {
+                        valueArr += ","
+                    }
+                });
+                ExecDelete('/tools/submit_ajax.ashx?action=user_point_delete', valueArr, 'turl');
+            }
+        }
+	</script>
+    <div class="tab_head">
+      <ul class="tabs">
+          <li > <a href="/web/IntegralExchange.html">积分消费兑换</a></li>
+          <li class="selected"> <a href="/web/IntegralExchangeList.html">积分消费兑换列表</a></li>
+        
+        <li ><a href="/user/point/list.html">积分消费明细</a></li>
+          <li><a href="/user/point/convert.html">积分现金充值</a></li>
+      </ul>
+    </div>
+    <table id="list_data" cellspacing="0" cellpadding="0" >
+                </table>
+    
+
+    <!--积分明细-->
+    
+    
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<!--Footer-->
+<!--<div class="footer">
+  <div class="footer_inner">
+    <div class="foot_nav">
+      <a target="_blank" href="/index.html">首 页</a>|
+      <a target="_blank" href="/content/about.html">关于我们</a>|
+      <a target="_blank" href="">新闻资讯</a>|
+      <a target="_blank" href="/goods.html">购物商城</a>|
+      <a target="_blank" href="/down.html">资源下载</a>|
+      <a target="_blank" href="/photo.html">图片分享</a>|
+      <a target="_blank" href="/feedback.html">留言反馈</a>|
+      <a target="_blank" href="/link.html">友情链接</a>|
+      <a target="_blank" href="/content/contact.html">联系我们</a>|
+    </div>
+    <div class="clear"></div>
+    <div class="copyright">
+      <p>版权所有 动力启航软件工作室 粤ICP备11064298号 版本：V3.0.0 © Copyright 2009 - 2011. dtcms.net. All Rights Reserved. <script src="http://s24.cnzz.com/stat.php?id=1996164&web_id=1996164&show=pic" language="JavaScript"></script>&nbsp; </p>
+    </div>
+  </div>
+</div>-->
+
+    <div class="footer">
+        <div class="footer_ins">
+            <div class="footer_nav">
+                <div class="footer_nav_left"><a href="javascript:;"></a></div>
+                <div class="footer_nav_right">
+                    <div class="footer_nav_right_top">
+                        <ul>
+                            <li><a href="#">网站地图</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">热点新闻</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">媒体中心</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">工作机会</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav_right_copyrihgt">Copyright © Nutricia Early Life Nutrition (Shanghai) Co., Ltd. 沪ICP备13042062号-5 网站地图</div>
+                </div>
+            </div>
+            <div class="footer_logo"><a href="javascript:;"></a></div>
+        </div>
+    </div>
+<!--/Footer-->
+    <script>
+
+        //$.ajax({
+        //    type: "POST",
+        //    url: "/ashx/BarCodeCreateList.ashx",
+        //    data: "page=1&&rows=10",
+        //    success: function (msg) {
+        //        alert("Data Saved: " + msg);
+        //    }
+        //});
+        //datagrid初始化 
+        $('#list_data').datagrid({
+            title: '积分消费列表',
+            iconCls: 'icon-edit',//图标 
+            width: 'auto',
+            height: 'auto',
+            nowrap: true,
+            striped: true,
+            border: true,
+            collapsible: false,//是否可折叠的 
+            fit: false,//自动大小 
+            fitColumns: true,
+            url: '/ashx/IntegralExchange.ashx?type=select',
+            //sortName: 'code', 
+            //sortOrder: 'desc', 
+            remoteSort: false,
+            idField: 'GoodCategoryID',
+            singleSelect: false,//是否单选 
+            pagination: true,//分页控件 
+            rownumbers: true,//行号 
+            columns: [[
+                { field: 'user_name', title: '用户名称', width: $(this).width() * 0.1 },
+                { field: 'IntegralCode', title: '积分码', width: $(this).width() * 0.1 },
+                //{ field: 'ip', title: 'IP地址', width: $(this).width() * 0.1 },
+                { field: 'IntegralRatio', title: '积分比值', width: $(this).width() * 0.1 },
+                { field: 'CreateTime', title: '兑换时间', width: $(this).width() * 0.1 }
+
+            ]]
+        });
+        //设置分页控件 
+        var p = $('#list_data').datagrid('getPager');
+        $(p).pagination({
+            showPageList: false,
+            pageSize: 10,//每页显示的记录条数，默认为10 
+            pageList: [5, 10],//可以设置每页记录条数的列表 
+            beforePageText: '第',//页数文本框前显示的汉字 
+            afterPageText: '页    共 {pages} 页',
+            displayMsg: '当前显示 {from} - {to} 条记录   共 {total} 条记录',
+            //onBeforeRefresh: function () {
+            //    $(this).pagination('loading');
+            //    alert('before refresh');
+            //    $(this).pagination('loaded');
+            //}
+            //onChangePageSize: function () {
+
+            //},
+            //onSelectPage: function (pageList, pageSize) {
+            //    alert(pageNumber);
+            //    alert(pageSize);
+            //}
+            /*onBeforeRefresh:function(){
+                $(this).pagination('loading');
+                alert('before refresh');
+                $(this).pagination('loaded');
+            }*/
+        });
+    </script>
+</body>
+</html>

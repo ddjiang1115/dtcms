@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="/scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+<script type="text/javascript" src="/scripts/datepicker/WdatePicker.js"></script>
+<script type="text/javascript" src="/scripts/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/scripts/swfupload/swfupload.queue.js"></script>
+<script type="text/javascript" src="/scripts/swfupload/swfupload.handlers.js"></script>
+<script type="text/javascript" src="../js/layout.js"></script>
+<link href="../skin/default/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/simplePagination.css" rel="stylesheet" />
+
+    <script src="../../scripts/jquery.simplePagination.js"></script>
+ 
+</head>
+<body>
+ 
+    <div id="light-pagination" class="pagination">
+        <ul>
+            <li><a href="http://localhost:810/admin/BarCode/HtmlPage1.html#page-1">1</a></li>
+            <li><a href="http://localhost:810/admin/BarCode/HtmlPage1.html#page-2">2</a></li>
+            <li><a href="http://localhost:810/admin/BarCode/HtmlPage1.html#page31">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a>6</a></li>
+        </ul>
+    </div>
+    <script>
+
+        $(".pagination ul li a").each(function (e) {
+            $(this).click(function () {
+                alert(e);
+            })
+        });
+    </script>
+</body>
+</html>

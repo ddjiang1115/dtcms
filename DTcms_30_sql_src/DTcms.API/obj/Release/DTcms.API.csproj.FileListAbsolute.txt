@@ -1,0 +1,1 @@
+D:\DTcms_30_sql_src\DTcms.API\obj\Release\DTcms.API.csprojResolveAssemblyReference.cache

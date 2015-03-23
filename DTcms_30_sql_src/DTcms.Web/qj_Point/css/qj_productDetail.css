@@ -1,0 +1,249 @@
+﻿@charset "utf-8";
+/*按钮样式*/
+.btn {
+    border-radius: 2px 2px 2px 2px;
+    color: #FFF;
+    display: inline-block;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    min-width: 48px;
+    padding: 0 25px;
+    text-align: center;
+    font-family: "Microsoft Yahei";
+}
+
+.btn {
+    background-color: #1E7BB3;
+    background-image: -moz-linear-gradient(center top, #3999D2, #1E7BB3);
+    border-bottom: 1px solid #02598E;
+    box-shadow: 0 1px 2px #BBBBBB;
+    text-shadow: 0 -1px 0 #1E7BB3;
+}
+
+    .btn:hover {
+        color: #FFF;
+        opacity: 0.9;
+    }
+
+.btn-mini {
+    height: 20px;
+    line-height: 20px;
+    padding: 1px 8px 0;
+}
+
+input.btn, button.btn {
+    border-left: 0 none;
+    border-right: 0 none;
+    border-top: 0 none;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #52A152;
+    background-image: -moz-linear-gradient(center top, #5FBE5F, #52A152);
+    border-bottom: 1px solid #417F41;
+    text-shadow: 0 -1px 0 #52A152;
+}
+
+.btn-error {
+    background-color: #CB423B;
+    background-image: -moz-linear-gradient(center top, #E85A56, #CB423B);
+    border-bottom: 1px solid #AA352F;
+    text-shadow: 0 -1px 0 #CB423B;
+}
+
+.btn-gray {
+    background-color: #DDDDDD;
+    background-image: -moz-linear-gradient(center top, #EEEEEE, #DDDDDD);
+    border-bottom: 1px solid #A9A9A9;
+    text-shadow: 0 -1px 0 #EEEEEE;
+}
+
+    .btn-gray, .btn-gray:hover {
+        color: #777777;
+    }
+
+/*评论*/
+.comment_box {
+}
+
+.comment_list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #EEE;
+}
+
+    .comment_list li .floor {
+        float: right;
+        font-size: 18px;
+        color: #DDD;
+    }
+
+    .comment_list li .avatar {
+        display: block;
+        background: #FFF;
+        border-radius: 2px 2px 2px 2px;
+        float: left;
+        height: 36px;
+        overflow: hidden;
+        width: 36px;
+    }
+
+        .comment_list li .avatar img {
+            width: 36px;
+            height: 36px;
+        }
+
+    .comment_list li .inner {
+        margin-left: 48px;
+    }
+
+        .comment_list li .inner p {
+            font-size: 13px;
+        }
+
+        .comment_list li .inner .meta {
+            padding-top: 3px;
+            color: #999;
+            border: none;
+        }
+
+    .comment_list li .answer {
+        margin-left: 48px;
+        padding: 10px;
+        background: #F6F6F6;
+        border: 1px solid #E6E6E6;
+        border-radius: 3px 3px 3px 3px;
+    }
+
+        .comment_list li .answer .meta {
+            color: #999;
+            margin-bottom: 5px;
+            padding: 0;
+            border: none;
+        }
+
+.comment_editor {
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+/*加入购物车*/
+.cart_info {
+    z-index: 2;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid #DFC795;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    _left: -269px;
+    width: 302px;
+    height: auto;
+    background: #F7F2D0;
+    text-align: left;
+}
+
+    .cart_info .close {
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 15px;
+        height: 10px;
+        text-indent: -9999px;
+        background: url(../images/sprite.gif) no-repeat left -240px;
+        cursor: pointer;
+    }
+
+/*提示样式*/
+.msg_tips {
+    margin: 30px auto;
+    position: relative;
+    width: 380px;
+}
+
+    .msg_tips .ico {
+        display: block;
+        float: left;
+        background: url(../images/icon_tips.png) no-repeat left top;
+        width: 46px;
+        height: 46px;
+        text-indent: -99999px;
+        overflow: hidden;
+    }
+
+        .msg_tips .ico.error {
+            background-position: -50px 0;
+        }
+
+        .msg_tips .ico.warning {
+            background-position: -100px 0;
+        }
+
+    .msg_tips .msg {
+        margin-left: 60px;
+    }
+
+        .msg_tips .msg strong {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .msg_tips .msg p {
+            line-height: 1.8em;
+        }
+
+
+
+.red {
+    color: #F00;
+}
+
+    .red:hover {
+        color: #F60;
+    }
+
+    .red a {
+        color: #F00;
+    }
+
+        .red a:hover {
+            color: #F60;
+        }
+
+.gray {
+    color: #666;
+}
+
+    .gray:hover {
+        color: #F60;
+    }
+
+    .gray a {
+        color: #666;
+    }
+
+        .gray a:hover {
+            color: #F60;
+        }
+
+.blue {
+    color: #1E7BB3;
+}
+
+    .blue:hover {
+        color: #F60;
+    }
+
+    .blue a {
+        color: #1E7BB3;
+    }
+
+        .blue a:hover {
+            color: #F60;
+        }

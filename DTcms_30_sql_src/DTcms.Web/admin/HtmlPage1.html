@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        VIH_DisplayOnPage = "no";
+    </script> 
+<script type="text/javascript" src="http://scripts.hashemian.com/js/visitorIPHOST.js.php"></script> 
+<script type="text/javascript">
+    $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' + VIH_HostIP, function (_result) {
+        var ipData = ""; //初始化保存内容变量
+        if (remote_ip_info.ret == '1') {
+            if (remote_ip_info.country == "中国") {
+                location.href = "http://www.sh-yarun.com";
+            }
+        } else {
+            alert('错误', '没有找到匹配的 IP 地址信息！');
+        }
+    });
+</script>
+</head>
+<body>
+
+</body>
+</html>

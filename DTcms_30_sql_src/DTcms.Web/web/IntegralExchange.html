@@ -1,0 +1,226 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>积分消费 - 美国旭贝尔婴幼儿配方奶粉官方网站-今天旭贝尔，明天诺贝尔！</title>
+<link rel="stylesheet" href="/css/pagination.css" />
+<link media="screen" type="text/css" href="/templates/green/css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="/scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+<script type="text/javascript" src="/templates/green/js/base.js"></script>
+<script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+    <script src="/web/js/layer.min.js"></script>
+    <link href="/web/style/layer.css" rel="stylesheet" />
+    <link href="/web/style/layer.ext.css" rel="stylesheet" />
+    <style>        label.error {color:red;
+        }
+    </style>
+</head>
+
+<body>
+<!--Header-->
+
+<link href="/web/style/style.css" rel="stylesheet" />
+    <div class="header">
+        <div class="header_ins">
+            <h1 class="logo"><a href="javascript:;"></a></h1>
+            <div class="txt"><a href="javascript:;">
+                <img src="/web/images/tel.png" /></a></div>
+        </div>
+    </div>
+    <div class="navArea">
+        <div class="navBg">
+            <ul class="nav">
+                <li><a href="/web/index.aspx">首  页</a></li>
+                <li><a href="/web/import.aspx">100%美国进口</a></li>
+                <li><a href="#">产品优势</a></li>
+                <li><a href="/web/products.aspx">旭贝尔产品</a>
+                    <ul class="nav_sub" style="display: none;">
+                        <li><a href="/web/productsresult.aspx">美国生产流程</a></li>
+                        <li><a href="/web/products.aspx">进口追溯体验</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">在线购买</a></li>
+                <li class="member_nav"><a class="on2">会员俱乐部</a>
+                    <ul class="nav_sub" style="display: none;">
+                        <li><a href="/web/Login.aspx">会员登录</a></li>
+                        <li><a href="/user/center/index.html">会员中心</a></li>
+                        <li><a href="/web/member.aspx">会员设置</a></li>
+                        <li><a href="/qj_Point/product.aspx">积分商城</a></li>
+                        <li><a href="/admin/Login.aspx">经销商登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script type="text/javascript">
+    $("li").mousemove(function () {
+        $(this).children("ul").show();
+    });
+    $("li").mouseout(function () {
+        $(this).children("ul").hide();
+    });
+</script>
+<!--/Header-->
+
+<div class="boxwrap">
+  <div class="left180">
+    <!--Sidebar-->
+        <div class="sidebar">
+      <h3>交易管理</h3>
+      <ul>
+        <li><a href="/user/order-list.html">交易订单</a></li>
+        <li><a href="/user/order-close.html">已关闭订单</a></li>
+      </ul>
+      <h3>账户管理</h3>
+      <ul>
+        <li><a href="/user/amount/recharge.html">账户余额</a></li>
+        <li><a href="/web/IntegralExchange.html">我的积分</a></li>
+        <li><a href="/user/message/system.html">站内短信</a></li>
+       <!-- <li><a href="/user/center/invite.html">邀请码</a></li>-->
+      </ul>
+      <h3>基本资料</h3>
+      <ul>
+        <li><a href="/user/center/proinfo.html">个人资料</a></li>
+        <li><a href="/user/center/password.html">修改密码</a></li>
+        <li><a href="/user/center/exit.html">退出登录</a></li>
+      </ul>
+    </div>
+    <!--/Sidebar-->
+  </div>
+  
+  <div class="right757">
+    <h1 class="main_tit">
+      <span><a href="/user/center/index.html">管理首页</a></span>
+      我的积分
+      <strong>Point</strong>
+    </h1>
+    
+    <!--积分明细-->
+    <script type="text/javascript">
+        function ExecPostBack(checkValue) {
+            if (arguments.length == 1) {
+                ExecDelete('/tools/submit_ajax.ashx?action=user_point_delete', checkValue, 'turl');
+            } else {
+                var valueArr = '';
+                $("input[name='checkId']:checked").each(function (i) {
+                    valueArr += $(this).val();
+                    if (i < $("input[name='checkId']:checked").length - 1) {
+                        valueArr += ","
+                    }
+                });
+                ExecDelete('/tools/submit_ajax.ashx?action=user_point_delete', valueArr, 'turl');
+            }
+        }
+	</script>
+      <form name="form1"  id="form1">
+
+    <div class="tab_head">
+      <ul class="tabs">
+          <li class="selected"> <a href="/web/IntegralExchange.html">积分消费兑换</a></li>
+          <li> <a href="/web/IntegralExchangeList.html">积分消费兑换列表</a></li>
+          <li ><a href="/user/point/list.html">积分消费明细</a></li>
+        <li><a href="/user/point/convert.html">积分现金充值</a></li>
+        
+          
+      </ul>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mtable">
+       <!--取得一个DataTable-->
+       <!--取得分页页码列表-->
+      
+      <tr>
+        <td width="50" align="center">积分码</td>
+        <td width="150"><input type="text" name="IntegralCode" id="IntegralCode" class="input txt" /></td>
+        <td></td>
+      </tr>
+      <tr>
+          <td width="20" align="center"></td>
+          <td width="150"><input type="button" id="btnSubmit" class="btn_submit" value="确认兑换" /></td></tr>
+    </table>
+    
+</form>
+    <!--积分明细-->
+    
+    
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<!--Footer-->
+
+    <div class="footer">
+        <div class="footer_ins">
+            <div class="footer_nav">
+                <div class="footer_nav_left"><a href="javascript:;"></a></div>
+                <div class="footer_nav_right">
+                    <div class="footer_nav_right_top">
+                        <ul>
+                            <li><a href="#">网站地图</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">热点新闻</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">媒体中心</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">工作机会</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav_right_copyrihgt">Copyright © Nutricia Early Life Nutrition (Shanghai) Co., Ltd. 沪ICP备13042062号-5 网站地图</div>
+                </div>
+            </div>
+            <div class="footer_logo"><a href="javascript:;"></a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $().ready(function () {
+            $("#form1").validate({
+                rules: {
+                    IntegralCode: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10,
+                        remote: {
+                            type: "GET",
+                            url: "/ashx/Verification.ashx?action=IntegralCode",
+                            data: {
+                                IntegralCode: function () { return $("#IntegralCode").val(); }
+                            }
+                        }
+                    }
+                },
+                messages: {
+                    IntegralCode: {
+                        required: "请输入积分码",
+                        minlength: "请输入10位数字",
+                        maxlength: "请输入10位数字",
+                        remote: "该积分码不存在或已被兑换"
+                    }
+                },
+                errorPlacement: function (error, element) {
+                    error.appendTo(element.parent().next());
+                }
+            });
+        });</script>
+    <script type="text/javascript">
+
+            $("#btnSubmit").click(function () {
+                if ($("#form1").valid()) {
+                    $.ajax({
+                        type: "get",
+                        url: "/ashx/Integration.ashx?type=exchange&IntegralCode=" + $("#IntegralCode").val(),
+                        success: function (msg) {
+                            if (msg == "true") {
+                                layer.msg('兑换成功'); //风格二
+                            }
+                            else {
+                                layer.msg('兑换失败');
+                            }
+                        }
+                    });
+                }
+            });
+
+    </script>
+<!--/Footer-->
+</body>
+</html>
